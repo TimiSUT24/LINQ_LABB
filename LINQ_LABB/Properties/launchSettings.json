@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "LINQ_LABB": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "CONNECTION": "Data Source=localhost\\SQLEXPRESS;Initial Catalog=EHandel;Integrated Security=True;TrustServerCertificate=True;"
+      }
+    }
+  }
+}
