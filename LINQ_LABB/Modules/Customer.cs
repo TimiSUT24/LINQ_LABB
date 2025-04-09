@@ -18,6 +18,7 @@ namespace LINQ_LABB.Modules
         [Required]
         public string Address { get; set; }
 
+        //Navigation Prop 
         public ICollection<Order> Orders { get; set; } = new List<Order>();
     }
 }
