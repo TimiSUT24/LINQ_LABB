@@ -26,15 +26,13 @@ namespace LINQ_LABB
 
             while (true)
             {
-                Console.WriteLine("Välj ett alternativ:");
+                Console.WriteLine("Välj ett alternativ:\n");
                 Console.WriteLine("1. Electronics\n" +
                     "2. Suppliers\n" +
                     "3. Total order value\n" +
                     "4. Most sold products\n" +
                     "5. List all categories\n" +
-                    "6. Get all orders\n" +
-                    "\n" +
-                    "\n" +
+                    "6. Get all orders\n" +                  
                     "0. Exit");
 
 
@@ -48,8 +46,9 @@ namespace LINQ_LABB
                 {
                     if (Input == "0")
                     {
-                        Console.WriteLine("Hejdå");
-                        break;
+                        Console.Clear();
+                        Console.WriteLine("Closing program...");
+                        break;                       
                     }
                     Console.WriteLine("Ogiltigt val, försök igen.");
                 }
@@ -57,7 +56,7 @@ namespace LINQ_LABB
                 Console.WriteLine("\nPress any key to continue");
                 Console.ReadKey();
                 Console.Clear();
-            }
+            }           
         }
 
     }

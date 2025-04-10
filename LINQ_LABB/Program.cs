@@ -6,7 +6,7 @@ namespace LINQ_LABB
     {
         static void Main(string[] args)
         {
-            Menu.ShowMenu();       
+            Menu.ShowMenu();     
         }
     }
 }
