@@ -60,18 +60,17 @@ namespace LINQ_LABB
         public static void TotalOrderValue()
         {
             Console.Clear();
-            DateTime current = DateTime.Now;
+            DateTime current = DateTime.Today;
             DateTime from = current.AddDays(-29); 
 
 
             using (var context = new E_HandelContext())
             {
-                var totalOrderValue = context.Orders
-                    .Where(d => d.OrderDate >=from && d.OrderDate <= current)                 
-                    .Select(o => o.OrderDetails.Sum(od => od.Quantity * od.UnitPrice))
-                    .Sum();
-
-                    Console.WriteLine($"Total order value this month: {totalOrderValue} kr");
+                var totalOrderValue = context.OrderDetails
+                    .Where(d => d.Order.OrderDate >= from && d.Order.OrderDate <= current)                  
+                    .Sum(od => od.Quantity * od.UnitPrice);
+                                   
+               Console.WriteLine($"Total order value this month: {totalOrderValue} kr");
             }
         }
 

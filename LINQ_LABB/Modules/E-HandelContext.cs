@@ -134,14 +134,14 @@ namespace LINQ_LABB.Modules
 
             modelBuilder.Entity<Order>().HasData(
                new Order { Id = 1, OrderDate = new DateTime(2025, 3, 1), CustomerId = 1, TotalAmount = 11999, Status = "Levererad" },
-               new Order { Id = 2, OrderDate = new DateTime(2025, 3, 5), CustomerId = 2, TotalAmount = 9798, Status = "Levererad" },
+               new Order { Id = 2, OrderDate = new DateTime(2025, 3, 5), CustomerId = 2, TotalAmount = 9695, Status = "Levererad" },
                new Order { Id = 3, OrderDate = new DateTime(2025, 3, 10), CustomerId = 3, TotalAmount = 18999, Status = "Behandlas" },
                new Order { Id = 4, OrderDate = new DateTime(2025, 3, 12), CustomerId = 4, TotalAmount = 3499, Status = "Levererad" },
                new Order { Id = 5, OrderDate = new DateTime(2025, 3, 15), CustomerId = 5, TotalAmount = 16994, Status = "Skickad" },
                new Order { Id = 6, OrderDate = new DateTime(2025, 2, 20), CustomerId = 1, TotalAmount = 899, Status = "Levererad" },
-               new Order { Id = 7, OrderDate = new DateTime(2025, 2, 25), CustomerId = 3, TotalAmount = 2498, Status = "Levererad" },
-               new Order { Id = 8, OrderDate = new DateTime(2025, 3, 18), CustomerId = 2, TotalAmount = 1598, Status = "Skickad" },
-               new Order { Id = 9, OrderDate = new DateTime(2025, 3, 20), CustomerId = 4, TotalAmount = 5794, Status = "Behandlas" },
+               new Order { Id = 7, OrderDate = new DateTime(2025, 2, 25), CustomerId = 3, TotalAmount = 2546, Status = "Levererad" },
+               new Order { Id = 8, OrderDate = new DateTime(2025, 3, 18), CustomerId = 2, TotalAmount = 3496, Status = "Skickad" },
+               new Order { Id = 9, OrderDate = new DateTime(2025, 3, 20), CustomerId = 4, TotalAmount = 11896, Status = "Behandlas" },
                new Order { Id = 10, OrderDate = new DateTime(2025, 3, 22), CustomerId = 5, TotalAmount = 1299, Status = "Behandlas" }
             );
 
