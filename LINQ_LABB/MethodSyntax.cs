@@ -40,18 +40,19 @@ namespace LINQ_LABB
             Console.WriteLine("{0,-20} {1,-20}", "Supplier", "Product Count");
             using (var context = new E_HandelContext())
             {
-                var suppliers = context.Suppliers
+                var suppliers = context.Products              
                 .Select(s => new
                 {
-                    s.Name,
-                    ProductCount = s.Products.Count()
+                    s.Supplier.Name,
+                    InStock = s.StockQuantity,
+                    
                 })
-                .Where(s => s.ProductCount < 10)
+                .Where(s => s.InStock < 10)
                 .ToList();
 
                 foreach (var item in suppliers)
                 {
-                    Console.WriteLine($"{item.Name.PadRight(20)} {item.ProductCount}");
+                    Console.WriteLine($"{item.Name.PadRight(20)} {item.InStock}");
                 }
 
             }
@@ -69,7 +70,7 @@ namespace LINQ_LABB
                 var totalOrderValue = context.OrderDetails
                     .Where(d => d.Order.OrderDate >= from && d.Order.OrderDate <= current)                  
                     .Sum(od => od.Quantity * od.UnitPrice);
-                                   
+                                  
                Console.WriteLine($"Total order value this month: {totalOrderValue} kr");
             }
         }
